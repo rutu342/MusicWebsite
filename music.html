@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Music Creator</title>
+    <link rel="stylesheet" href="style.css">
+    <meta name="theme-color" content="#000000">
+    <meta name="viewport" content="width=device-width , initial-scale=1">
+    <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<div class="main">
+    <div class="progress_bar" id="Bar"></div>
+    <img src="musimg.jpg" alt="" id="bg">
+    <!-- navbar part -->
+    <div class="navbar">
+        <a href="home.html" id="logo"><i class='bx bxs-bar-chart-alt-2' ></i>&nbsp;MUSIFY</a>
+        <a onclick="open_close_menu()" id="responsive_menu"><i class='bx bxs-chevron-down' ></i></a>
+
+        <div class="nav_content">
+            <li><a href="home.html">Home</a></li>
+            <li><a href="#track">Tracks</a></li>
+            <li><a href="#user_comments">Comments</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="home.html">Logout</a></li>
+        </div>
+
+        <a onclick="menu_action()" id="menu_btn"><i class='bx bx-menu-alt-left'></i></a>
+        <div class="side_menu">
+            <li><a href="#"><i class='bx bx-category'></i></a></li>
+            <li><a href="#"><i class='bx bx-tv'></i></a></li>
+            <li><a href="#"><i class='bx bxs-movie-play'></i></a></li>
+            <li><a href="#"><i class='bx bxs-message-square-detail'></i></a></li>
+            <li><a href="#"><i class='bx bx-merge'></i></a></li>
+            <li><a href="#"><i class='bx bxs-cart-add'></i></a></li>
+        </div>
+    </div>
+
+    <!--  mid part -->
+    <div class="mid_part">
+        <img src="song_img/song_img1.jpg" alt="" id="music-album-image">
+
+        <div class="description">
+            <p id="A_name">Shape Of You</p>
+            <p id="music_artist_name">Ed Sheeran</p>
+            <br>
+            <div class="author_desc">
+                <p id="description">Shape Of You is a song by English singer-songwritter Ed Sheeran. It was released as a digital download on 6 January 2017.</p>
+                <p id="quote">Life is one grand sweet song so start the music</p>
+            </div>
+
+            <div class="buttons">
+                <button><i class='bx bx-play' id="Play_Pause_Button"></i></button>
+                <button><i class='bx bxs-like' ></i></button>
+                <button><i class='bx bx-share-alt'></i></button>
+                <button><i class='bx bx-bookmark-alt'></i></button>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- music control panel -->
+    <div class="music-control">
+        <i class="fa fa-backward" id="prev" title="Previous"></i>
+        <i class="fa fa-play main_button" id="play" title="Play"></i>
+        <i class="fa fa-forward" id="next" title="Next"></i>
+    </div>
+
+    <!-- music seek bar  -->
+    <div class="music-seek-bar">
+        <div class="current-time" id="current-time">0:00</div>
+        <div class="music-length-total" id="music-length-total">
+            <div class="music-length-present" id="music-length-present"></div>
+            <div class="circle-mover"></div>
+        </div>
+        <div class="total-time" id="total-time">0:00</div>
+    </div>
+
+    <!-- volume scroll bar  -->
+    <div class="music-seek-bar">
+        <i class="fa fa-volume-off" id="volume-low"></i>
+        <div class="volume-length-total" id="volume-length-total">
+            <div class="volume-length-present" id="volume-length-present"></div>
+            <div class="circle-mover"></div>
+        </div>
+        <i class="fa fa-volume-up" id="volume-high"></i>
+    </div>
+
+    <!-- Audio player  -->
+    <audio src="songs/1.mp3"></audio>
+
+    <!-- tracks part -->
+    <div class="top_tracks" id="top_tracks">
+        <p id="heading"><i class='bx bxs-playlist'></i>&nbsp;&nbsp;Top Tracks</p>
+        <div id="track"></div>
+
+        <div id="track">
+            <img src="song_img/song_img1.jpg" alt="" class="song-image-list">
+            <div id="actions">
+                <a href=""><i class='bx bx-heart' id="heart1"></i></a>
+                <!-- <a id="play_pause"><i class='bx bx-play'></i></a> -->
+            </div>
+
+            <!-- <audio src="songs/1.mp3" id="music"></audio> -->
+
+            <div id="song_desc">
+                <p>Shape of You</p>
+                <p>Ed Sheeran</p>
+                <p id="total_download"><i class='bx bx-download'></i>&nbsp;&nbsp;2000+</p>
+                <p id="message">New</p>
+            </div>
+            <div id="actions_2">
+                <p><a href="#"><i class='bx bx-share' ></i></a></p>
+                <p><a href="1.mp3" download><i class='bx bx-download'></i></a></p>
+            </div>
+        </div>
+
+        <div id="track">
+            <img src="song_img/song_img2.jpg" alt="" class="song-image-list">
+            <div id="actions">
+                <a href=""><i class='bx bx-heart' id="heart2"></i></a>
+                <!-- <a id="play_pause"><i class='bx bx-play'></i></a> -->
+            </div>
+            <!-- <audio src="songs/2.mp3" id="music"></audio> -->
+
+            <div id="song_desc">
+                <p>7 Rings</p>
+                <p>Ariana Grande</p>
+                <p id="total_download"><i class='bx bx-download'></i>&nbsp;&nbsp;2000+</p>
+                <p id="message">New</p>
+            </div>
+
+            <div id="actions_2">
+                <p><i class='bx bx-share'></i></p>
+                <p><a href="2.mp3" download><i class='bx bx-download'></i></a></p>
+            </div>
+        </div>
+
+        <div id="track">
+            <img src="song_img/song_img3.jpg" alt="" class="song-image-list">
+            <div id="actions">
+                <a href=""><i class='bx bx-heart' id="heart3"></i></a>
+                <!-- <a id="play_pause"><i class='bx bx-play'></i></a> -->
+            </div>
+            <!-- <audio src="songs/3.mp3" id="music"></audio> -->
+
+            <div id="song_desc">
+                <p>You and I</p>
+                <p>One Direction</p>
+                <p id="total_download"><i class='bx bx-download'></i>&nbsp;&nbsp;2000+</p>
+                <p id="message">New</p>
+            </div>
+
+            <div id="actions_2">
+                <p><i class='bx bx-share'></i></p>
+                <p><a href="3.mp3" download><i class='bx bx-download'></i></a></p>
+            </div>
+        </div>
+
+        <div id="track">
+            <img src="song_img/song_img4.jpg" alt="" class="song-image-list">
+            <div id="actions">
+                <a href=""><i class='bx bx-heart' id="heart4"></i></a>
+                <!-- <a id="play_pause"><i class='bx bx-play'></i></a> -->
+            </div>
+            <!-- <audio src="songs/4.mp3" id="music"></audio> -->
+
+            <div id="song_desc">
+                <p>Love Story</p>
+                <p>Taylor Swift</p>
+                <p id="total_download"><i class='bx bx-download'></i>&nbsp;&nbsp;2000+</p>
+            </div>
+
+            <div id="actions_2">
+                <p><i class='bx bx-share'></i></p>
+                <p><a href="4.mp3" download><i class='bx bx-download'></i></a></p>
+            </div>
+        </div>
+
+        <div id="track">
+            <img src="song_img/song_img5.jpg" alt="" class="song-image-list">
+            <div id="actions">
+                <a href=""><i class='bx bx-heart' id="heart5"></i></a>
+                <!-- <a id="play_pause"><i class='bx bx-play'></i></a> -->
+            </div>
+            <!-- <audio src="songs/5.mp3" id="music"></audio> -->
+
+            <div id="song_desc">
+                <p>Everything I wanted</p>
+                <p>Billie Eilish</p>
+                <p id="total_download"><i class='bx bx-download'></i>&nbsp;&nbsp;2000+</p>
+            </div>
+
+            <div id="actions_2">
+                <p><i class='bx bx-share'></i></p>
+                <p><a href="5.mp3" download><i class='bx bx-download'></i></a></p>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- user comments part -->
+    <div class="user_comments" id="user_comments">
+        <p id="heading"><i class='bx bx-comment-detail'></i>&nbsp;&nbsp;COMMENTS</p>
+
+        <div class="comments">
+
+            <div class="comment">
+                <div id="user_p">
+                    <p><i class='bx bx-user'></i>&nbsp;&nbsp;Ed Sheeran</p>
+                    <p></p>
+                </div>
+                <div id="user_c">
+                    <p>Music is a powerful tool in galvanizing people around an issue. There's no better way to put it in a beautiful song.</p>
+                    <div id="social">
+                        <a><i class='bx bxl-facebook-circle' ></i></a>
+                        <a><i class='bx bxl-twitter' ></i></a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="comment">
+                <div id="user_p">
+                    <p><i class='bx bx-user'></i>&nbsp;&nbsp;Ariana Grande</p>
+                    <p></p>
+                </div>
+                <div id="user_c">
+                    <p>Music is something that everyone on earth can share. Music is meant to heal us, to bring us together, to make us happy</p>
+                    <div id="social">
+                        <a><i class='bx bxl-facebook-circle' ></i></a>
+                        <a><i class='bx bxl-twitter' ></i></a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="comment">
+                <div id="user_p">
+                    <p><i class='bx bx-user'></i>&nbsp;&nbsp;Taylor Swift</p>
+                    <p></p>
+                </div>
+                <div id="user_c">
+                    <p>People haven't always been there for me, but Music always has. I'm not afraid ton write my feelings in songs.</p>
+                    <div id="social">
+                        <a><i class='bx bxl-facebook-circle' ></i></a>
+                        <a><i class='bx bxl-twitter' ></i></a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="comment">
+                <div id="user_p">
+                    <p><i class='bx bx-user'></i>&nbsp;&nbsp;Charlie Parker</p>
+                    <p></p>
+                </div>
+                <div id="user_c">
+                    <p>Music is your own experience, your thoughts, your wisdom.If you don't live it, it won't come out og your horn.</p>
+                    <div id="social">
+                        <a><i class='bx bxl-facebook-circle' ></i></a>
+                        <a><i class='bx bxl-twitter' ></i></a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- popular creator part -->
+    <div class="popular_creator">
+        <p id="heading"><i class='bx bx-trophy'></i>&nbsp;&nbsp;POPULAR ARTIST</p>
+        <div class="artists_list">
+
+            <div class="artist">
+                <img src="img/img1.jpg" alt="">
+                <div class="artist_desc">
+                    <p>Ariana Grande</p>
+                    <p><i class='bx bx-like'></i>&nbsp;&nbsp;2000+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i class='bx bx-share'></i>500+</p>
+                </div>
+
+            </div>
+
+            <div class="artist">
+                <img src="img/img2.webp" alt="">
+                <div class="artist_desc">
+                    <p>Ed Sheeran</p>
+                    <p><i class='bx bx-like'></i>&nbsp;&nbsp;2000+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i class='bx bx-share'></i>500+</p>
+                </div>
+            </div>
+
+            <div class="artist">
+                <img src="img/img3.jpg" alt="">
+                <div class="artist_desc">
+                    <p>Billie Elilish</p>
+                    <p><i class='bx bx-like'></i>&nbsp;&nbsp;2000+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i class='bx bx-share'></i>500+</p>
+                </div>
+            </div>
+
+            <div class="artist">
+                <img src="img/img4.jpg" alt="">
+                <div class="artist_desc">
+                    <p>One Direction</p>
+                    <p><i class='bx bx-like'></i>&nbsp;&nbsp;2000+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i class='bx bx-share'></i>500+</p>
+                </div>
+            </div>
+
+            <div class="artist">
+                <img src="img/img5.jpg" alt="">
+                <div class="artist_desc">
+                    <p>Xxxtension</p>
+                    <p><i class='bx bx-like'></i>&nbsp;&nbsp;2000+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i class='bx bx-share'></i>500+</p>
+                </div>
+            </div>
+
+            <div class="artist">
+                <img src="img/img6.jpg" alt="">
+                <div class="artist_desc">
+                    <p>Taylor Swift</p>
+                    <p><i class='bx bx-like'></i>&nbsp;&nbsp;2000+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i class='bx bx-share'></i>500+</p>
+                </div>
+            </div>
+
+            <div class="artist">
+                <img src="img/img7.jpg" alt="">
+                <div class="artist_desc">
+                    <p>Khalid</p>
+                    <p><i class='bx bx-like'></i>&nbsp;&nbsp;2000+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i class='bx bx-share'></i>500+</p>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- footer part -->
+    <footer class="footer">
+        <a id="logo">Copyright &copy; 2021 - All rights reserved&nbsp;&nbsp;&nbsp;&nbsp;<i class='bx bxs-bar-chart-alt-2' ></i>&nbsp;Musify</a>
+        <div class="social_handle">
+            <i class='bx bxl-twitter'></i>
+            <i class='bx bxl-twitch'></i>
+            <i class='bx bxl-github'></i>
+        </div>
+    </footer>
+
+</div>
+
+<!-- javascript file -->
+<script src="main.js"></script>
+</body>
+
+</html>
+
+</html>

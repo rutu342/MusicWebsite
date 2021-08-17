@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/88eb219d62.js" crossorigin="anonymous"></script>
+    <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="contact.css">
+    <title>Signup Page</title>
+</head>
+
+<body>
+    <nav class="navBar">
+        <a href="music.html" id="logo"><i class='bx bxs-bar-chart-alt-2' ></i>&nbsp;Musify</a>
+    </nav>
+    <div class="container">
+        <h1>Welcome to Musify </h1>
+        <div class="box">
+            <i class="fa fa-envelope"></i>
+            <input type="email" name="email" id="email" placeholder="Enter Your Email">
+            <p id="emailerror">Please Enter A Valid Email</p>
+        </div>
+        <div class="box">
+            <i class="fa fa-key"></i>
+            <input type="password" name="password" id="password" placeholder="Enter Your Password">
+            <p id="passworderror">Enter a valid password. (_,@,$,&,0-9 and Alphabets are<br> only allowed and length greater than 8 and less tha 20)</p>
+        </div>
+        <div class="btn-div">
+            <button id="SignUpButton" class="btn" type="submit"><a href="contact.html">SignUp</a></button>
+            <button id="LoginButton" class="btn" type="submit" value="submit"><a href="music.html">Login</a></button>
+        </div>
+    </div>
+    <script src="signin.js"></script>
+</body>
+
+</html>

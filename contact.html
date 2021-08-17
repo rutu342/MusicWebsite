@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/88eb219d62.js" crossorigin="anonymous"></script>
+    <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="contact.css">
+    <title>Signup Page</title>
+</head>
+
+<body>
+    <nav class="navBar">
+        <a href="music.html" id="logo"><i class='bx bxs-bar-chart-alt-2' ></i>&nbsp;Musify</a>
+    </nav>
+    <div class="container">
+        <h1>Welcome to Musify</h1>
+        <div class="box">
+            <i class="fa fa-user"></i>
+            <input type="text" name="name" id="name" placeholder="Enter Your Name">
+            <p id="nameerror">Enter a valid name. (Only Alphabets and length less than 20)</p>
+        </div>
+        <div class="box">
+            <i class="fa fa-envelope"></i>
+            <input type="email" name="email" id="email" placeholder="Enter Your Email">
+            <p id="emailerror">Enter a valid email.</p>
+        </div>
+        <div class="box">
+            <i class="fa fa-phone"></i>
+            <input type="phone" name="phone" id="phone" placeholder="Enter Your Phone Number">
+            <p id="phoneerror">Enter a valid phone number without country-code</p>
+        </div>
+        <div class="box">
+            <i class="fa fa-key"></i>
+            <input type="password" name="password" id="password" placeholder="Create Your Password">
+            <p id="passworderror">Enter a valid password. (_,@,$,&,0-9 and Alphabets are<br> only allowed and length greater than 8 and less tha 20)</p>
+        </div>
+        <div class="box">
+            <i class="fa fa-key"></i>
+            <input type="password" name="password" id="confirmPassword" placeholder="Confirm Your Password">
+            <p id="confirmerror">Please write the same password</p>
+        </div>
+        <div class="btn-div">
+            <button id="SIGNUPBUTTON" class="btn" type="submit" value="submit"><a href="signin.html">SignUp</a></button>
+            <button id="LOGINBUTTON" class="btn"><a href="signin.html">Login</a></button>
+        </div>
+    </div>
+    <script src="contact.js"></script>
+</body>
+
+</html>

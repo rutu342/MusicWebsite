@@ -1,0 +1,170 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    overflow: hidden;
+}
+
+body {
+    background: url('contact_background.jpg') no-repeat center center;
+    height: 100vh;
+    width: 100%;
+}
+
+#logo {
+    background-size: cover;
+    background-repeat: no-repeat;
+    font-family: cursive;
+    font-weight: bold;
+    color: #fff;
+    font-size: 1.8em;
+    text-decoration: none;
+    cursor: pointer;
+    margin-left: 4em;
+    font-family: cursive;
+}
+
+.navBar {
+    height: 12vh;
+    /* background-color: red; */
+    display: flex;
+    align-items: center;
+    color: #fff;
+}
+
+.navBar #logo {
+    color: #fff;
+    font-size: 1.8em;
+    text-decoration: none;
+    cursor: pointer;
+    margin-left: 4em;
+    font-family: cursive;
+}
+
+.navBar #logo:hover {
+    color: #E91E63;
+}
+
+.container {
+    width: 42vw;
+    height: 100vh;
+    color: white;
+    position: absolute;
+    top: 10vh;
+    left: 27vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.container h1 {
+    font-size: 3.0vw;
+    font-family: 'Open Sans', sans-serif;
+    display: inline-block;
+    margin-top: 8vh;
+}
+
+.container h1:hover {
+    color: rgb(241, 6, 124)
+}
+
+.box {
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.box input {
+    background: transparent;
+    outline: none;
+    color: white;
+    border-style: none;
+    text-align: center;
+    font-size: 1.3vw;
+    padding: 4vh 0;
+}
+
+.box input::placeholder {
+    color: white;
+}
+
+.box i {
+    width: 2vw;
+    text-align: center;
+    color: white;
+    margin-right: 0.4vw;
+}
+
+.box p {
+    position: fixed;
+    right: 5vw;
+    display: none;
+    color: white;
+    font-size: 1vw;
+    font-weight: bold;
+}
+
+.btn-div {
+    width: 100vw;
+    height: 15vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.btn {
+    cursor: pointer;
+    outline: none;
+    font-size: 1vw;
+    padding: 1.7vh 2.3vw;
+    margin: 2vh;
+    width: 9vw;
+    background: none;
+    color: white;
+    border-radius: 10vw;
+    border-style: none;
+    border: 2px solid white;
+}
+
+.btn a {
+    text-decoration: none;
+    color: white;
+}
+
+.btn:hover {
+    color: white;
+    background: pink;
+    font-size: 1.3vw;
+}
+
+@media(max-width: 700px) {
+    body {
+        background: url('contact_background.jpg') no-repeat center center;
+    }
+    .container {
+        width: 60%;
+        position: absolute;
+        top: 14%;
+        left: 16%;
+    }
+    .container h1 {
+        font-size: 20px;
+    }
+    .box input {
+        margin-left: 10px;
+        font-size: 10px;
+    }
+    .btn-div {
+        flex-direction: column;
+    }
+    .btn {
+        width: 80px;
+        font-size: 10px;
+    }
+    .box p {
+        font-size: 1.3vw;
+    }
+}
